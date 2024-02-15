@@ -1,15 +1,30 @@
-<p>login works!</p>
 <div class="login-container" id="login-div">
     <form class="login-form">
-      <div class="label-name">Fundoo</div>
+      <div class="text-center">
+        <span style="color: orange;">Fundo</span>
+        <span>Sign in</span>
+        <span>Use your Fundo Account</span>
+      </div>
+      <div class="text-field">        
         <mat-form-field appearance="outline">
             <mat-label>Email or Phone</mat-label>
             <input matInput placeholder="Enter the Email or Phone">      
           </mat-form-field>
-          <br>
-          <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Enter Password">      
-          </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Enter Password">      
+            </mat-form-field>
+            <button mat-button color="primary" style="width: fit-content;">Forgot Password</button>
+             <!-- <div class="login-btn-cnt">
+            <button mat-button color="primary" routerLink="/signup">Create account</button>
+            <button mat-raised-button color="primary" (click)="handleLogin()">Login</button>
+        </div> -->
+        <div class="login-btn-cnt">
+          <button mat-button color="primary">Create account</button>
+          <button mat-flat-button color="primary">Login</button>
+
+      </div>
+      </div>
+      
     </form>
 </div>
