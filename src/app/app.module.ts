@@ -7,20 +7,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NotesComponent } from './components/notes/notes.component';
+import { ArchiveContainerComponent } from './components/archive-container/archive-container.component';
+import { TrachContainerComponent } from './components/trach-container/trach-container.component';
+import { NotesContainerComponent } from './components/notes-container/notes-container.component';
+import { DashboardLayoutComponent } from './components/dashboard-layout/dashboard-layout.component';
+import { NoteCardComponent } from './components/note-card/note-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NotesComponent 
+    ArchiveContainerComponent,
+    TrachContainerComponent,
+    NotesContainerComponent,
+    DashboardLayoutComponent,
+    NoteCardComponent 
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,8 @@ import { NotesComponent } from './components/notes/notes.component';
     MatButtonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
 
   ],
   providers: [],
