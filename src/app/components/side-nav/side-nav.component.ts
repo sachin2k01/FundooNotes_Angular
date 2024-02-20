@@ -3,13 +3,14 @@ import { Route } from '@angular/router';
 import { Subscription } from 'rxjs';
 import DataServiceService from 'src/app/services/dataService/data-service.service';
 
+
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit,OnDestroy {
-  drawerState!:boolean;
+  drawerState:boolean=true;
   subscription!:Subscription;
 
   constructor( private dataService:DataServiceService) { }

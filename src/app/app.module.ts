@@ -24,6 +24,7 @@ import { DashboardLayoutComponent } from './components/dashboard-layout/dashboar
 import { NoteCardComponent } from './components/note-card/note-card.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { FundoHeaderComponent } from './components/fundo-header/fundo-header.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FundoHeaderComponent } from './components/fundo-header/fundo-header.com
     DashboardLayoutComponent,
     NoteCardComponent,
     SideNavComponent,
-    FundoHeaderComponent 
+    FundoHeaderComponent,
+    CreateNoteComponent 
   ],
   imports: [
     BrowserModule,

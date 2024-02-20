@@ -1,19 +1,32 @@
-<div>
-    <div class="note-cnt">
-        <div class="notes-card-cnt">
+<div class="note-cnt">
+    <div class="notes-card-cnt">
+        <div class="note-details">
             <div class="note-input-fld">
-                <span>{{NoteDetails.title}}</span>
+                <span id="title">{{NoteDetails.title}}</span>
             </div>
             <div class="note-input-fld">
-                <input id="description" type="text" value=[NoteDetails.description] placeholder="description">
-            </div>   
-            <div class="note-icon">
-                <mat-icon svgIcon="note-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
-                <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
-                <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
-                <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
-                <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                <span id="description">{{NoteDetails.description}}</span>
             </div>
-        </div>   
+        </div>
+        <div class="note-buttons">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon svgIcon="colloborator-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon svgIcon="color-icon" aria-hidden="false" aria-label="Color SVG icon"></mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="Remainder SVG icon"></mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Edit SVG icon"></mat-icon>
+            </button>
+        </div>
     </div>
 </div>

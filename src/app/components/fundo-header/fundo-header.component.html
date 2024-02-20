@@ -1,5 +1,36 @@
-<div class="header-cnt">
-    <div>
-        <button (click)="handleDrawerState()">Open</button>
+<div  class="head-container" >
+    <div class="cnt1">
+        <!-- <button (click)="handleDrawerState()">open</button> -->
+
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon svgIcon="menu-icon" aria-hidden="false" aria-label="menu SVG icon" (click)="handleDrawerState()"></mat-icon>
+        </button>
+        <div class="logo-container">
+            <!-- <mat-icon style="background-color: #FCC209;" svgIcon="note-icon" aria-hidden="false" aria-label="notes SVG icon"></mat-icon> -->         
+            <img class="image" src="\assets\Google_Keep_icon.png" alt="no image">
+            <span style="font-size: 22px; color:black; font-family: Roboto, 'Helvetica Neue', sans-serif;">Fundoo</span>
+        </div>  
     </div>
+
+    <div class="search-container">
+        <mat-icon svgIcon="search-icon" aria-hidden="false" aria-label="search SVG icon"></mat-icon>
+        <input type="text" class="in" placeholder="Search">
+    </div>
+    
+    <div class="cnt2">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon svgIcon="refresh-icon" aria-hidden="false" aria-label="Refresh SVG icon"></mat-icon>
+
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon svgIcon="listView-icon" aria-hidden="false" aria-label="ListView SVG icon"></mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon svgIcon="setting-icon" aria-hidden="false" aria-label="Setting SVG icon"></mat-icon>
+        </button>
+
+
+
+    </div>
+
 </div>

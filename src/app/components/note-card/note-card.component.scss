@@ -1,47 +1,38 @@
-.notes-card-cnt{
-    width: 250px;
-    height: 163px;
-    border: solid gray 1px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-}
-
-#title,#description{
-    letter-spacing: .00625em;
-    font-family: Roboto,Arial,sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-    border: none;
-    outline: none;
-}
-
-.note-cnt{
+.note-cnt {
     width: 300px;
-    height: 200px;
-    display: block;
-
+    display: flex;
 }
 
-.note-input-fld{
-    font-family: "Google Sans",Roboto,Arial,sans-serif;
+.notes-card-cnt {
+    width: 290px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.note-details {
+    padding: 10px;
+    margin-left: 3px;
+}
+
+.note-input-fld {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
-    letter-spacing: 0;
     line-height: 1.5rem;
-    padding: 10px;
-    width: 220px;
-    height: 40px;
+    margin-bottom: 10px;
 }
 
-.note-icon {
+.note-buttons {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 210px;
-    height: 20px;
-    margin: 0px 4px;
+    padding-left: 3px;
+    margin-bottom: 3.3px;
 }
 
+.example-icon {
+    font-size: 24px;
+    margin: 0 5px;
+    width: 36px; /* Set a specific width for all buttons */
+    height: 36px; /* Set a specific height for all buttons */
+}
 

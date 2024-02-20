@@ -1,13 +1,16 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="false">
-    <mat-drawer #drawer [mode]="'over'" [opened]="drawerState">
-        <span routerLink="/dashboard/notes">Notes</span>
-        <br><br>
-        <span routerLink="/dashboard/archive">Archive</span>
-        <br><br>
-        <span routerLink="/dashboard/trash">Trash</span>
-    </mat-drawer>
-    <mat-drawer-content>
-        <router-outlet></router-outlet> 
-    </mat-drawer-content>
-</mat-drawer-container>
-    
+<div class="dash-side-nav">
+    <div>
+        <mat-drawer-container class="example-container" [hasBackdrop]="false">
+            <mat-drawer #drawer [mode]="'over'" [opened]="drawerState" class="nav-btn">
+                <span routerLink="/dashboard/notes">Notes</span>
+                <br><br>
+                <span routerLink="/dashboard/archive">Archive</span>
+                <br><br>
+                <span routerLink="/dashboard/trash">Trash</span>
+            </mat-drawer>
+            <mat-drawer-content class="side-nav-content">
+                <router-outlet></router-outlet> 
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </div>   
+</div>

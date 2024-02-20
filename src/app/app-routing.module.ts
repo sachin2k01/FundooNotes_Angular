@@ -8,6 +8,7 @@ import { NotesContainerComponent } from './components/notes-container/notes-cont
 import { ArchiveContainerComponent } from './components/archive-container/archive-container.component';
 import { TrachContainerComponent } from './components/trash-container/trach-container.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,10 @@ const routes: Routes = [
 {
   path:"trash",
   component:TrachContainerComponent
+},
+{
+  path:"createNote",
+  component:CreateNoteComponent
 }]
   },
   {
