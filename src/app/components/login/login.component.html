@@ -9,15 +9,15 @@
         <mat-form-field appearance="outline">
             <mat-label>Email or Phone</mat-label>
             <input formControlName="email" matInput placeholder="Enter the Email or Phone">     
-            <mat-error *ngIf="submitted && f['email']?.hasError('email')">Enter correct email format</mat-error> 
-            <mat-error *ngIf="submitted && f['email']?.hasError('required')">Email required</mat-error> 
+            <mat-error *ngIf="submitted && formValidation['email']?.hasError('email')">Enter correct email format</mat-error> 
+            <mat-error *ngIf="submitted && formValidation['email']?.hasError('required')">Email required</mat-error> 
 
           </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
               <input formControlName="password" type="password" matInput placeholder="Enter Password">   
-              <mat-error *ngIf="submitted && f['password']?.hasError('required')">password required</mat-error> 
-              <mat-error *ngIf="submitted && f['password']?.hasError('minLength')">minimum password length required</mat-error> 
+              <mat-error *ngIf="submitted && formValidation['password']?.hasError('required')">password required</mat-error> 
+              <mat-error *ngIf="submitted && formValidation['password']?.hasError('minLength')">minimum password length required</mat-error> 
 
    
             </mat-form-field>
@@ -25,9 +25,7 @@
         <div class="login-btn-cnt">
           <button mat-button color="primary">Create account</button>
           <button (click)="handleLogin()" mat-flat-button color="primary">Login</button>
-
-      </div>
-      </div>
-      
+        </div>
+      </div>      
     </form>
 </div>

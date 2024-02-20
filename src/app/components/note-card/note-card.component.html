@@ -2,10 +2,10 @@
     <div class="note-cnt">
         <div class="notes-card-cnt">
             <div class="note-input-fld">
-                <input id="title" type="text" placeholder="Title">
+                <span>{{NoteDetails.title}}</span>
             </div>
             <div class="note-input-fld">
-                <input id="description" type="text" placeholder="description">
+                <input id="description" type="text" value=[NoteDetails.description] placeholder="description">
             </div>   
             <div class="note-icon">
                 <mat-icon svgIcon="note-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
@@ -13,7 +13,6 @@
                 <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
                 <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
                 <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
-    
             </div>
         </div>   
     </div>

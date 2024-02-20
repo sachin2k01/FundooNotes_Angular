@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
+<mat-drawer-container class="example-container" [hasBackdrop]="false">
     <mat-drawer #drawer [mode]="'over'" [opened]="drawerState">
         <span routerLink="/dashboard/notes">Notes</span>
         <br><br>
@@ -7,6 +7,7 @@
         <span routerLink="/dashboard/trash">Trash</span>
     </mat-drawer>
     <mat-drawer-content>
-      
+        <router-outlet></router-outlet> 
     </mat-drawer-content>
 </mat-drawer-container>
+    

@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Route } from '@angular/router';
 import { Subscription } from 'rxjs';
 import DataServiceService from 'src/app/services/dataService/data-service.service';
 
@@ -20,5 +21,6 @@ export class SideNavComponent implements OnInit,OnDestroy {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
+  
 
 }

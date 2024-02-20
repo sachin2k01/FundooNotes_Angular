@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { error } from 'console';
+import { Router } from '@angular/router';
 import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { UserServiceService } from 'src/app/services/userService/user-service.se
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private userService:UserServiceService) { }
+  constructor(private formBuilder: FormBuilder,private userService:UserServiceService,private router:Router) { }
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
@@ -30,10 +30,13 @@ handleLogin(){
   this.userService.userLogin({
     email:email,
     password:password
-  }).subscribe(result=>console.log(result),error=>console.log(error))
-
+  }).subscribe((result:any)=>{
+    localStorage.setItem("AuthToken",result.data)
+    this.router.navigate(["/dashboard/notes"]
+  )},
+  error=>console.log(error))
   console.log(this.loginForm.value)
 
 }
-get f() { return this.loginForm.controls; }
+get formValidation() { return this.loginForm.controls; }
 }
