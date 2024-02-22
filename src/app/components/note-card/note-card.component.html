@@ -1,5 +1,5 @@
-<div class="note-cnt">
-    <div class="notes-card-cnt">
+<div class="note-cnt" [style.background-color]="NoteDetails.color">
+    <div class="notes-card-cnt" >
         <div class="note-details">
             <div class="note-input-fld">
                 <span id="title">{{NoteDetails.title}}</span>
@@ -19,14 +19,25 @@
                 <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="Remainder SVG icon"></mat-icon>
             </button>
             <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
+                <mat-icon svgIcon="archive-icon" (click)="handleNoteCardIconsClick('archive')" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
             </button>
             <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Edit SVG icon"></mat-icon>
+                <mat-icon svgIcon="more-icon" [matMenuTriggerFor]="moreMenu" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
             </button>
         </div>
+        <mat-menu #moreMenu="matMenu">
+            <button mat-menu-item (click)="handleNoteCardIconsClick('archive')">
+              <span>trash</span>
+            </button>
+            <button mat-menu-item disabled>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+
+        
+
     </div>
 </div>

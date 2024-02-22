@@ -45,7 +45,11 @@ const routes: Routes = [
     component:NoteCardComponent
   },
   {path:"navbar",
-component:SideNavComponent}
+component:SideNavComponent},
+{
+  path:"createnote",
+  component:CreateNoteComponent
+}
 ];
 
 @NgModule({

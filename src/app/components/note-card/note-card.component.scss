@@ -1,7 +1,27 @@
 .note-cnt {
     width: 300px;
     display: flex;
+    border: solid grey 1px;
+    border-radius: 5px;
+    box-shadow: 5px;
 }
+
+
+.input-icon-container {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  .takenotes-input {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .takenotes-main-cnt {
+    display: flex; /* Use flexbox for icons */
+    gap: 10px; /* Adjust as needed */
+    background: transparent;
+  }
+  
 
 .notes-card-cnt {
     width: 290px;
@@ -24,8 +44,10 @@
 }
 
 .note-buttons {
-    display: flex;
-    padding-left: 3px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 4px;
     margin-bottom: 3.3px;
 }
 

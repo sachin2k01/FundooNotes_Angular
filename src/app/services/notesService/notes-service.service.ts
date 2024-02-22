@@ -12,4 +12,9 @@ export class NotesServiceService {
   {
     return this.httpService.getAllNotesApiCall("Notes/UserNotes");
   }
+
+  createNote(data:object)
+  {
+    return this.httpService.createNoteApiCall("Notes/Notes",data);
+  }
 }

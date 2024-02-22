@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpServiceService {
+  public header=new HttpHeaders({
+    Authorization: `Bearer ${localStorage.getItem("AuthToken")}`
+  })
 
   baseUrl:string="https://localhost:7228/api/"
 
@@ -23,11 +26,14 @@ export class HttpServiceService {
 
   getAllNotesApiCall(endPoint:string):Observable<any>
   {
-    const header=new HttpHeaders({
-      Authorization: `Bearer ${localStorage.getItem("AuthToken")}`
-    })
+    
     return this.http.get(this.baseUrl+endPoint,{
-      headers:header
+      headers:this.header
     })
+  }
+
+  createNoteApiCall(endPoint:string,data:object)
+  {
+    return this.http.post(this.baseUrl+endPoint,data,{headers:this.header})
   }
 }

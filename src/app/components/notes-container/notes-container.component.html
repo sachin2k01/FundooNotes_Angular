@@ -1,5 +1,8 @@
 <div class="note-list">
+    <div>
+        <app-create-note  (updateList)="updateNotesList($event)"></app-create-note>
+    </div>
     <div *ngFor="let note of noteList" class="note-item">
-        <app-note-card [NoteDetails]="note"></app-note-card>
+        <app-note-card [NoteDetails]="note" (updateList)="updateNotesList($event)"></app-note-card>
     </div>
 </div>
