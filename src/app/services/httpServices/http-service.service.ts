@@ -36,4 +36,23 @@ export class HttpServiceService {
   {
     return this.http.post(this.baseUrl+endPoint,data,{headers:this.header})
   }
+
+
+  archiveNoteApiCall(endPoint:string,noteId:number)
+  {
+    return this.http.put(this.baseUrl+endPoint+'?noteId='+noteId,"",{headers:this.header})
+  }
+
+
+  trashNoteApiCall(endPoint:string,noteId:number)
+  {
+    return this.http.put(this.baseUrl+endPoint+'?noteId='+noteId,"",{headers:this.header})
+  }
+
+  changeNoteColorApiCall(endPoint:string,noteId:number,color:string)
+  {
+    const encodedColor = encodeURIComponent(color);
+    return this.http.put(this.baseUrl+endPoint+'?noteId='+noteId+'&color='+encodedColor,"",{headers:this.header})
+  }
+  
 }

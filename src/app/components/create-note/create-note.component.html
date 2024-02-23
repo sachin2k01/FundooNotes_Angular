@@ -10,9 +10,9 @@
       </div>
   </div>
   
-  <div class="create-cnt-2" [style.background-color]="color">
+  <div class="create-cnt-2" >
       <ng-template #open>
-          <div class="takenotes-main-cnth">
+          <div class="takenotes-main-cnth" [style.background-color]="color">
             <div class="takenote-input-1-cnt">
                 <input class="takenote-inputs-1"  placeholder="Title" [(ngModel)]="title">
                 <!-- <mat-icon svgIcon="pin-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon> -->

@@ -17,4 +17,21 @@ export class NotesServiceService {
   {
     return this.httpService.createNoteApiCall("Notes/Notes",data);
   }
+
+  archiveNote(noteId:number)
+  {
+    return this.httpService.archiveNoteApiCall("Notes/archieveNote",noteId)
+
+  }
+
+  trashNote(noteId:number)
+  {
+    return this.httpService.archiveNoteApiCall("Notes/trashNote",noteId)
+  }
+
+  updateNoteColor(noteId:number,color:string)
+  {
+    return this.httpService.changeNoteColorApiCall("Notes/addColorToNote",noteId,color)
+  }
+
 }

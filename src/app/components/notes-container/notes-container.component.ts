@@ -43,14 +43,17 @@ export class NotesContainerComponent implements OnInit {
         this.noteList=[$event.data,...this.noteList]
       }
     }
-    else if($event.action=="archive")
+    else if($event.action=="archive" || $event.action=="trash" )
     {
-      this.noteList=this.noteList.filter((ele,index)=>ele.noteId != $event.data.noteId)
-    }
-    else if($event.action=="trash"){
-      this.noteList=this.noteList.filter((ele,index)=>ele.noteId !=$event.data.noteId)
+        this.noteList=this.noteList.filter((ele,index)=>ele.noteId != $event.data.noteId)   
     }
     // console.log($event);   
+    else{
+      this.noteList=this.noteList.map(ele=>{
+        if(ele.noteId==$event.data.noteId) return $event.data
+        return ele
+      })
+    }
   }
 
 }

@@ -3,7 +3,8 @@
     height: max-content;
     padding: 5px;
     // border: 1px solid #949494;
-    background-color:  #d1d4d6;
+    background-color:  #afb4b8;
+    border: 1px solid gray;
     border-radius: 5px;
     display: flex;
     gap: 8px;
@@ -95,19 +96,24 @@
     border-radius: 5px;
     width:500px;
     height:40px;
+    border-width: 0;
     margin-bottom: 0;
 
 }
 
 .takenotes-main-cnt{
     display: flex;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 7px;
+    padding: 5px;
 }
 
 .takenotes-inner-cnt{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    gap: 8px;
 }
 
 .col{

@@ -2,11 +2,19 @@
     <div>
         <mat-drawer-container class="example-container" [hasBackdrop]="false">
             <mat-drawer #drawer [mode]="'over'" [opened]="drawerState" class="nav-btn">
-                <span routerLink="/dashboard/notes">Notes</span>
-                <br><br>
-                <span routerLink="/dashboard/archive">Archive</span>
-                <br><br>
-                <span routerLink="/dashboard/trash">Trash</span>
+                <div class="side-nav-cnt">
+                    <mat-icon svgIcon="note-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                    <span routerLink="/dashboard/notes">Notes</span>
+                </div>
+                <div class="side-nav-cnt">
+                    <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
+                    <span routerLink="/dashboard/archive">Archive</span>
+                </div>
+                <div class="side-nav-cnt">
+                    <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+                    <span routerLink="/dashboard/trash">Trash</span>
+                </div>
+
             </mat-drawer>
             <mat-drawer-content class="side-nav-content">
                 <router-outlet></router-outlet> 

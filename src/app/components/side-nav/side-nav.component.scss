@@ -3,19 +3,41 @@
 }
 
 .example-container {
-    width: 1450px; /* Fixed width for the container */
+    width: 1440px; /* Fixed width for the container */
     height: 100%;
-    margin-left: 12px;
+    margin-left: 8px;
     transition: margin-left 0.3s ease;
 }
 
 
 .nav-btn {
     width: 200px; //drawer width
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 .side-nav-content {
     margin-top: 25px;
     margin-left: 54px; /* Space between content and edges of the viewport */
+}
+
+.side-nav-cnt{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+mat-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

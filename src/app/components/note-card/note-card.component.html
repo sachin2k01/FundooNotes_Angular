@@ -9,24 +9,73 @@
             </div>
         </div>
         <div class="note-buttons">
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="colloborator-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="color-icon" aria-hidden="false" aria-label="Color SVG icon"></mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="Remainder SVG icon"></mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="archive-icon" (click)="handleNoteCardIconsClick('archive')" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon svgIcon="more-icon" [matMenuTriggerFor]="moreMenu" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
-            </button>
+            <ng-container *ngIf="containerName !== 'trash'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon svgIcon="colloborator-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+
+            <ng-container *ngIf="containerName !== 'trash'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon [matMenuTriggerFor]="colorMenus" svgIcon="color-icon" aria-hidden="false" aria-label="Color SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+
+            <ng-container *ngIf="containerName !== 'trash'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="Remainder SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+
+            <ng-container *ngIf="containerName === 'notes'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon svgIcon="archive-icon" (click)="handleNoteCardIconsClick('archive')" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+
+            <ng-container *ngIf="containerName === 'archive'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with archive icon">
+                    <mat-icon svgIcon="unarchive-icon"  (click)="handleNoteCardIconsClick('archive')" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+
+            <ng-container *ngIf="containerName !== 'trash'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon svgIcon="more-icon" [matMenuTriggerFor]="moreMenu" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+            <ng-container *ngIf="containerName === 'trash'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon svgIcon="restore-icon" (click)="handleNoteCardIconsClick('trash')" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+                </button>
+            </ng-container>
+            <ng-container *ngIf="containerName === 'trash'">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon svgIcon="delete-forever-icon" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+                </button>
+
+            </ng-container>
         </div>
+        <mat-menu #colorMenus="matMenu" class="color-mat-menu">
+            <div class="color-palate-cnt">    
+                <div class="col" style="background-color: #ffffff;" matTooltip="Default" (click)="handleNoteCardIconsClick('#FFFFFF')"></div>
+                <div class="col" style="background-color: #FAAFA8 ;" matTooltip="Coral" (click)="handleNoteCardIconsClick('#FAAFA8')"></div>
+                <div class="col" style="background-color: #F39F76;" matTooltip="Peach" (click)="handleNoteCardIconsClick('#F39F76')"></div>
+                <div class="col" style="background-color:#FFF8B8 ;" matTooltip="Sand" (click)="handleNoteCardIconsClick('#FFF8B8')"></div>
+                <div class="col" style="background-color: #E2F6D3 ;" matTooltip="Mint" (click)="handleNoteCardIconsClick('#E2F6D3')"></div>
+                <div class="col" style="background-color:#B4DDD3 ;" matTooltip="Sage" (click)="handleNoteCardIconsClick('#B4DDD3')"></div>
+                <div class="col" style="background-color: #D4E4ED ;" matTooltip="Fog" (click)="handleNoteCardIconsClick('#D4E4ED')"></div>
+                <div class="col" style="background-color: #AECCDC ;" matTooltip="Storm" (click)="handleNoteCardIconsClick('#AECCDC')"></div>
+                <div class="col" style="background-color: #D3BFDB;" matTooltip="Dusk" (click)="handleNoteCardIconsClick('#D3BFDB')"></div>
+                <div class="col" style="background-color: #F6E2DD;" matTooltip="Blossom" (click)="handleNoteCardIconsClick('#F6E2DD')"></div>
+                <div class="col" style="background-color: #E9E3D4;" matTooltip="Clay" (click)="handleNoteCardIconsClick('#E9E3D4')"></div>
+                <div class="col" style="background-color: #EFEFF1;" matTooltip="Chalk" (click)="handleNoteCardIconsClick('#EFEFF1')"></div>       
+            </div>
+        </mat-menu>
+
+
         <mat-menu #moreMenu="matMenu">
-            <button mat-menu-item (click)="handleNoteCardIconsClick('archive')">
+            <button mat-menu-item (click)="handleNoteCardIconsClick('trash')">
               <span>trash</span>
             </button>
             <button mat-menu-item disabled>

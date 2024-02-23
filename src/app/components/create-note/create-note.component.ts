@@ -57,7 +57,7 @@ export class CreateNoteComponent implements OnInit {
 
   handleCreateNote(val:string)
   {
-    if(val === 'close')
+    if(val === 'close' && this.title && this.description)
     {
       this.clickToggle=!this.clickToggle; 
       const noteObj ={
