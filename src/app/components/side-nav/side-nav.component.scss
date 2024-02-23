@@ -1,12 +1,30 @@
-.dash-side-nav {
-    height: 100%;
+
+.side-nav-content {
+    flex: 1; /* Allow the content to grow and occupy remaining space */
+    overflow-y: auto; /* Enable vertical scrolling for the content */
 }
 
+
+
+.dash-side-nav {
+    display: flex;
+    height: 100vh;
+    padding-top: 40px;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+// .example-container {
+//     flex: 0 0 auto;
+//     width: 200px; /* Adjust the width of the drawer */
+//     height: 100%;
+//     transition: width 0.3s ease; /* Apply transition only to width */
+// }
 .example-container {
+    flex: 0 0 auto;
     width: 1440px; /* Fixed width for the container */
     height: 100%;
     margin-left: 8px;
-    transition: margin-left 0.3s ease;
+    transition: width 0.3s ease; /* Apply transition only to width */
 }
 
 
@@ -16,12 +34,15 @@
 }
 
 .side-nav-content {
+    flex: 1; /* Allow the content to grow and occupy remaining space */
+    overflow-y: auto;
     margin-top: 25px;
     margin-left: 54px; /* Space between content and edges of the viewport */
 }
 
 .side-nav-cnt{
     margin: 10px;
+    margin-left: 18px;
     width: 150px;
     height: 40px;
     display: flex;
@@ -36,8 +57,26 @@ span{
     align-items: center;
     font-weight: 700;
 }
-mat-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// mat-icon{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.mat-drawer-content {
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling for content */
+    padding-left: 200px; /* Adjust padding to account for drawer width */
+    transition: padding-left 0.3s ease; /* Apply transition only to padding */
+}
+
+.mat-drawer {
+    position: fixed; /* Keep the drawer fixed */
+    top: 47px;
+    left: 0;
+    bottom: 0;
+    width: 200px; /* Same width as container */
+    z-index: 1000; /* Ensure drawer is above content */
+    overflow-y: auto; /* Enable vertical scrolling for drawer */
+    border-right: 1px solid #ccc; /* Add border to separate drawer from content */
 }

@@ -47,6 +47,10 @@ export class NotesContainerComponent implements OnInit {
     {
         this.noteList=this.noteList.filter((ele,index)=>ele.noteId != $event.data.noteId)   
     }
+    else if($event.action=="delete")
+    {
+      this.noteList=this.noteList.filter((ele,index)=>ele.noteId!=$event.data.noteId);
+    }
     // console.log($event);   
     else{
       this.noteList=this.noteList.map(ele=>{

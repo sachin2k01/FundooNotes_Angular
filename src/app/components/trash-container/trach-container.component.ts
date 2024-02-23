@@ -41,7 +41,9 @@ export class TrachContainerComponent implements OnInit {
     {
       this.trashNoteList=this.trashNoteList.filter((ele,index)=>ele.noteId != $event.data.noteId) 
     }
-
+    if ($event.action == "delete") {
+      this.trashNoteList=this.trashNoteList.filter((ele,index)=>ele.noteId != $event.data.noteId)
+    }
+    
   }
-
 }

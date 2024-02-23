@@ -54,5 +54,11 @@ export class HttpServiceService {
     const encodedColor = encodeURIComponent(color);
     return this.http.put(this.baseUrl+endPoint+'?noteId='+noteId+'&color='+encodedColor,"",{headers:this.header})
   }
+
+
+  deleteNoteApiCall(endPoint:string,noteId:number)
+  {
+    return this.http.delete(this.baseUrl+endPoint+'?noteId='+noteId,{headers:this.header})
+  }
   
 }

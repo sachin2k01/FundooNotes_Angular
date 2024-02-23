@@ -4,7 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Route } from '@angular/router';
 import { Subscription } from 'rxjs';
 import DataServiceService from 'src/app/services/dataService/data-service.service';
-import { ARCHIVE_ICON, COLLABRATOR_ICON, NOTE_ICON, TRASH_ICON } from 'src/assets/svg-icons';
+import { ARCHIVE_ICON, COLLABRATOR_ICON, EDIT_ICON, NOTE_ICON, REMINDER_ICON, TRASH_ICON } from 'src/assets/svg-icons';
 
 
 @Component({
@@ -21,6 +21,9 @@ export class SideNavComponent implements OnInit,OnDestroy {
     iconRegistry.addSvgIconLiteral("note-icon", sanitizer.bypassSecurityTrustHtml(NOTE_ICON))
     iconRegistry.addSvgIconLiteral("archive-icon", sanitizer.bypassSecurityTrustHtml(ARCHIVE_ICON))
     iconRegistry.addSvgIconLiteral("trash-icon", sanitizer.bypassSecurityTrustHtml(TRASH_ICON))
+    iconRegistry.addSvgIconLiteral("remainder-icon", sanitizer.bypassSecurityTrustHtml(REMINDER_ICON))
+    iconRegistry.addSvgIconLiteral("edit-icon", sanitizer.bypassSecurityTrustHtml(EDIT_ICON))
+
    }
   
   ngOnInit(): void {

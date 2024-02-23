@@ -34,4 +34,9 @@ export class NotesServiceService {
     return this.httpService.changeNoteColorApiCall("Notes/addColorToNote",noteId,color)
   }
 
+  deleteNote(noteId:number)
+  {
+    return this.httpService.deleteNoteApiCall("Notes/NodeDelete",noteId)
+  }
+
 }

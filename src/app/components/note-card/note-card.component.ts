@@ -39,20 +39,29 @@ export class NoteCardComponent implements OnInit {
   }
 
   handleNoteCardIconsClick(action:string){
-    if(action=="archive")
-    {
-      this.noteService.archiveNote(this.NoteDetails.noteId).subscribe(res=>
-      this.updateList.emit({data:this.NoteDetails,action:"archive"}))
+    switch (action) {
+      case "archive":
+        this.noteService.archiveNote(this.NoteDetails.noteId).subscribe(res =>
+          this.updateList.emit({ data: this.NoteDetails, action: "archive" })
+        );
+        break;
+      case "trash":
+        this.noteService.trashNote(this.NoteDetails.noteId).subscribe(res =>
+          this.updateList.emit({ data: this.NoteDetails, action: "trash" })
+        );
+        break;
+        case "delete":
+          this.noteService.deleteNote(this.NoteDetails.noteId).subscribe(res=>this.updateList.emit({
+            data:this.NoteDetails,action: "delete"})
+          );
+          break;        
+      default:
+        this.noteService.updateNoteColor(this.NoteDetails.noteId, action).subscribe((res: any) =>
+          this.updateList.emit({ data: res, action: "color" })
+        );
+        break;
     }
-    else if(action=="trash")
-    {
-      this.noteService.trashNote(this.NoteDetails.noteId).subscribe(res=>
-      this.updateList.emit({data:this.NoteDetails,action:"trash"}))
-    }
-    else{
-      this.noteService.updateNoteColor(this.NoteDetails.noteId,action).subscribe((res:any)=>this.updateList.emit({data:res,action:"color"}))
-      
-    }
+    
   }
 
 }

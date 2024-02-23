@@ -3,7 +3,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import DataServiceService from 'src/app/services/dataService/data-service.service';
-import { MENU_ICON, SEARCH_ICON, REFRESH_ICON,SETTING_ICON,LIST_VIEW_ICON } from 'src/assets/svg-icons';
+import { MENU_ICON, SEARCH_ICON, REFRESH_ICON,SETTING_ICON,LIST_VIEW_ICON, MORE_ICON, OTHER_MENU_ICON } from 'src/assets/svg-icons';
 
 @Component({
   selector: 'app-fundo-header',
@@ -20,6 +20,7 @@ export class FundoHeaderComponent implements OnInit, OnDestroy {
     iconRegistry.addSvgIconLiteral("refresh-icon", sanitizer.bypassSecurityTrustHtml(REFRESH_ICON))
     iconRegistry.addSvgIconLiteral("listView-icon", sanitizer.bypassSecurityTrustHtml(LIST_VIEW_ICON))
     iconRegistry.addSvgIconLiteral("setting-icon", sanitizer.bypassSecurityTrustHtml(SETTING_ICON))
+    iconRegistry.addSvgIconLiteral("more-icon", sanitizer.bypassSecurityTrustHtml(OTHER_MENU_ICON)) 
   }
   
   ngOnInit(): void {

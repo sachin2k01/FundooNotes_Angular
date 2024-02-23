@@ -51,7 +51,7 @@
             </ng-container>
             <ng-container *ngIf="containerName === 'trash'">
                 <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                    <mat-icon svgIcon="delete-forever-icon" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+                    <mat-icon svgIcon="delete-forever-icon" (click)="handleNoteCardIconsClick('delete')" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
                 </button>
 
             </ng-container>
