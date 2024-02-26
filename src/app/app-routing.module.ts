@@ -9,6 +9,7 @@ import { ArchiveContainerComponent } from './components/archive-container/archiv
 import { TrachContainerComponent } from './components/trash-container/trach-container.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { AuthGuardService } from './services/authGuardService/auth-guard.service';
 
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
   },
   {
     path:"dashboard",
-    component:DashboardLayoutComponent,
+    component:DashboardLayoutComponent,canActivate:[AuthGuardService],
     children:[{
       path:"notes",
       component:NotesContainerComponent

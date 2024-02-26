@@ -6,12 +6,19 @@ import { BehaviorSubject } from 'rxjs';
 })
 export default class DataServiceService {
   private drawerState=new BehaviorSubject(false);
-  currentdrawerStae=this.drawerState.asObservable();
+  private searchText=new BehaviorSubject("");
+  currentdrawerState=this.drawerState.asObservable();
+  currentSearchText=this.searchText.asObservable();
 
   constructor() { }
 
   toggleDrawerState(state:boolean)
   {
     this.drawerState.next(state);
+  }
+
+  updateSearchText(state:string)
+  {
+    this.searchText.next(state);
   }
 }

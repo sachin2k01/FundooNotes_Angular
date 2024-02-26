@@ -12,7 +12,7 @@
 
     <div class="search-container">
         <mat-icon svgIcon="search-icon" aria-hidden="false" aria-label="search SVG icon"></mat-icon>
-        <input type="text" class="in" placeholder="Search">
+        <input type="text" [(ngModel)]="searchText" (input)="updateSearchText()" class="in" placeholder="Search">
     </div>
     
     <div class="cnt2">

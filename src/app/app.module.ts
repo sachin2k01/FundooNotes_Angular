@@ -27,6 +27,7 @@ import { NoteCardComponent } from './components/note-card/note-card.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { FundoHeaderComponent } from './components/fundo-header/fundo-header.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { SearchNotePipe } from './components/pipe/search-note.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
     NoteCardComponent,
     SideNavComponent,
     FundoHeaderComponent,
-    CreateNoteComponent 
+    CreateNoteComponent,
+    SearchNotePipe 
   ],
   imports: [
     BrowserModule,

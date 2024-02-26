@@ -14,6 +14,7 @@ export class FundoHeaderComponent implements OnInit, OnDestroy {
 
   drawerState!:boolean;
   subscription!:Subscription;
+  searchText!:string;
   constructor(private dataService:DataServiceService,iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
     iconRegistry.addSvgIconLiteral("menu-icon", sanitizer.bypassSecurityTrustHtml(MENU_ICON))
     iconRegistry.addSvgIconLiteral("search-icon", sanitizer.bypassSecurityTrustHtml(SEARCH_ICON))
@@ -24,12 +25,16 @@ export class FundoHeaderComponent implements OnInit, OnDestroy {
   }
   
   ngOnInit(): void {
-    this.subscription=this.dataService.currentdrawerStae.subscribe(state=>this.drawerState=state)
+    this.subscription=this.dataService.currentdrawerState.subscribe(state=>this.drawerState=state)
   }
 
   handleDrawerState()
   {
     this.dataService.toggleDrawerState(!this.drawerState);
+  }
+  updateSearchText()
+  {
+    this.dataService.updateSearchText(this.searchText);
   }
   
   ngOnDestroy(): void {

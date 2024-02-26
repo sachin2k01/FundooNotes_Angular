@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import DataServiceService from 'src/app/services/dataService/data-service.service';
 import { NotesServiceService } from 'src/app/services/notesService/notes-service.service';
 
 interface NoteObj {
@@ -17,6 +18,9 @@ interface NoteObj {
   styleUrls: ['./trach-container.component.scss']
 })
 export class TrachContainerComponent implements OnInit {
+
+  searchText!:string;
+
   trashNoteList:NoteObj[]=[{
     "noteId":0,
   "title": "",
@@ -26,13 +30,14 @@ export class TrachContainerComponent implements OnInit {
   "isPinned": false,
   "isTrash": true
   }];
-  constructor(private noteService:NotesServiceService) { }
+  constructor(private noteService:NotesServiceService,private dataService:DataServiceService) { }
 
   ngOnInit(): void {
     this.noteService.getAllNotes().subscribe((res:NoteObj[])=>
     {
       this.trashNoteList = res.filter(ele => ele.isTrash === true);
     })
+    this.dataService.currentSearchText.subscribe((state=>this.searchText=state))
   }
 
   updateTrashNoteList($event:{data:NoteObj,action:string})
