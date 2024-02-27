@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,8 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { FundoHeaderComponent } from './components/fundo-header/fundo-header.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { SearchNotePipe } from './components/pipe/search-note.pipe';
+import { EditComponentComponent } from './components/edit-component/edit-component.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { SearchNotePipe } from './components/pipe/search-note.pipe';
     SideNavComponent,
     FundoHeaderComponent,
     CreateNoteComponent,
-    SearchNotePipe 
+    SearchNotePipe,
+    EditComponentComponent 
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,8 @@ import { SearchNotePipe } from './components/pipe/search-note.pipe';
     MatToolbarModule,
     MatListModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
     
   ],
   providers: [],

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpServiceService } from '../httpServices/http-service.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,11 @@ export class NotesServiceService {
   deleteNote(noteId:number)
   {
     return this.httpService.deleteNoteApiCall("Notes/NodeDelete",noteId)
+  }
+
+  updateNote(data:{noteId:number,title:string,description:string})
+  {
+    return this.httpService.updateNoteApiCall("Notes/UpdateNote",data);
   }
 
 }

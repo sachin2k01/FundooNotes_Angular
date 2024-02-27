@@ -29,7 +29,8 @@ export class NotesContainerComponent implements OnInit {
   "color":"",
   "isArchive": false,
   "isPinned": false,
-  "isTrash": false
+  "isTrash": false,
+
   }];
   constructor(private notesService:NotesServiceService,private dataService:DataServiceService) { }
 
@@ -42,7 +43,7 @@ export class NotesContainerComponent implements OnInit {
     this.dataService.currentSearchText.subscribe((state=>this.searchText=state))
   }
 
-  updateNotesList($event:{data:NoteObj,action:string})        //to filter data in the NoteList to display in the NoteContainer
+  updateNotesList($event:any)        //to filter data in the NoteList to display in the NoteContainer
   {
     if($event.action=="create")
     {
@@ -58,6 +59,16 @@ export class NotesContainerComponent implements OnInit {
     else if($event.action=="delete")
     {
       this.noteList=this.noteList.filter((ele,index)=>ele.noteId!=$event.data.noteId);
+    }
+    else if ($event.action == "edit") {
+      
+      this.noteList = this.noteList.map(ele => {
+        console.log($event.data.data.title)
+        if (ele.noteId == $event.data.data.noteId) {
+          return $event.data.data; // Replace existing data with new data
+        }
+        return ele;
+      });
     }
     // console.log($event);   
     else{

@@ -1,6 +1,6 @@
-<div class="note-cnt" [style.background-color]="NoteDetails.color">
+<div class="note-cnt" [style.background-color]="NoteDetails.color" >
     <div class="notes-card-cnt" >
-        <div class="note-details">
+        <div class="note-details" (click)="handleNoteEdit($event)">
             <div class="note-input-fld">
                 <span id="title">{{NoteDetails.title}}</span>
             </div>
@@ -90,3 +90,5 @@
 
     </div>
 </div>
+
+

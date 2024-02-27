@@ -60,5 +60,11 @@ export class HttpServiceService {
   {
     return this.http.delete(this.baseUrl+endPoint+'?noteId='+noteId,{headers:this.header})
   }
+
+  updateNoteApiCall(endPoint:string,data:{noteId:number,title:string,description:string}):Observable<any>
+  {
+    console.log(data.noteId)
+    return this.http.put(this.baseUrl+endPoint+'?noteId='+data.noteId,data,{headers:this.header})
+  }
   
 }

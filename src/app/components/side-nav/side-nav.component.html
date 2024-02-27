@@ -11,7 +11,7 @@
                     <span >Remainder</span>
                 </div>
                 <div class="side-nav-cnt">
-                    <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                    <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Edit SVG icon"></mat-icon>
                     <span >Edit</span>
                 </div>
                 <div class="side-nav-cnt">
@@ -24,6 +24,26 @@
                 </div>
 
             </mat-drawer>
+            <mat-drawer #drawer [mode]="'over'" [opened]="!drawerState" class="small-side-nav-btn">
+                <div class="nav-cnt">
+                    <mat-icon svgIcon="note-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                </div>
+                <div class="nav-cnt">
+                    <mat-icon svgIcon="remainder-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                </div>
+                <div class="nav-cnt">
+                    <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="Note SVG icon"></mat-icon>
+                </div>
+                <div class="nav-cnt">
+                    <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="Archive SVG icon"></mat-icon>
+
+                </div>
+                <div class="nav-cnt">
+                    <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="Trash SVG icon"></mat-icon>
+                </div>
+
+            </mat-drawer>
+
             <mat-drawer-content class="side-nav-content">
                 <router-outlet></router-outlet> 
             </mat-drawer-content>

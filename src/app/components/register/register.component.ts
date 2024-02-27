@@ -36,7 +36,9 @@ handleRegister(){
     email:email,
     password:password,
     confirmPassword:confirmPassword
-  }).subscribe(res=>console.log(res),err=>console.log(err))
+  }).subscribe((res)=>{if(res.data){
+    this.router.navigate(["/login"])
+  }})
   console.log(this.registerForm.value)
 }
 get f() { return this.registerForm.controls; }

@@ -1,0 +1,114 @@
+
+.takenote-inputs-2{
+    width: 612px; 
+    height: max-content;
+    word-wrap: break-word;
+    background-color: transparent;
+    color:#171518;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    border: none;
+    outline: none;
+    font-size: larger;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-left: 10px;
+
+}
+
+
+.takenote-inputs-1{
+    width: 312px; 
+    height: max-content;
+    word-wrap: break-word;
+    background-color: transparent;
+    color:#171518;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    border: none;
+    outline: none;
+    font-size: larger;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 10px;
+
+
+ 
+}
+
+
+
+.takenotes-icon-main-cnt{
+    display: flex;
+    gap:40px;
+    margin-top: 12px;
+    margin-left: 10px;
+    
+   
+}
+.takenotes-icon-cnt{
+    display: flex;
+    align-items: center;
+    gap:40px;
+    justify-content: center;
+   
+}
+.takenotes-undo-icon{
+    display: flex;
+    gap: 30px;
+}
+.takenotes-close-btn{
+    margin-left: 68px;
+    color: rgb(38, 36, 36);
+    font-size: larger;
+    font-weight: 500;
+   
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-cnt-1{
+    display: flex;
+    justify-content: center;
+}
+
+.takenotes-input{
+    margin-top: 5px;
+    border-radius: 5px;
+    width:500px;
+    height:25px;
+    border-width: 0;
+    margin-bottom: 0;
+
+}
+
+.takenotes-main-cnt{
+    display: flex;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.takenotes-inner-cnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.col{
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    border: 0.8px solid grey;
+}
+
+.color-palate-cnt{
+    width: 260px;
+    height: 100px;
+}   

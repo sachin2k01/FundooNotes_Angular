@@ -10,6 +10,7 @@ import { TrachContainerComponent } from './components/trash-container/trach-cont
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { AuthGuardService } from './services/authGuardService/auth-guard.service';
+import { EditComponentComponent } from './components/edit-component/edit-component.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,10 @@ const routes: Routes = [
 {
   path:"createNote",
   component:CreateNoteComponent
+},
+{
+  path:"editNote",
+  component:EditComponentComponent
 }]
   },
   {
@@ -50,6 +55,10 @@ component:SideNavComponent},
 {
   path:"createnote",
   component:CreateNoteComponent
+},
+{
+  path:"editNote",
+  component:EditComponentComponent
 }
 ];
 

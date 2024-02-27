@@ -40,6 +40,8 @@
 .nav-btn {
     width: 200px; //drawer width
     margin-top: 2px;
+    border: none;
+    box-shadow: none;
 }
 
 .side-nav-content {
@@ -54,6 +56,17 @@
     margin-left: 18px;
     width: 150px;
     height: 40px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-cnt{
+    margin: 10px;
+    margin-top: 25px;
+    margin-left: 18px;
+    width: 50px;
     display: flex;
     justify-content:flex-start;
     align-items: center;
@@ -95,8 +108,19 @@ span{
     top: 47px;
     left: 0;
     bottom: 0;
-    width: 200px; /* Same width as container */
+    width: 180px; /* Same width as container */
     z-index: 1000; /* Ensure drawer is above content */
     overflow-y: auto; /* Enable vertical scrolling for drawer */
-    border-right: 1px solid #ccc; /* Add border to separate drawer from content */
+    border-right: 0.1px solid #ccc; /* Add border to separate drawer from content */
+}
+
+.small-side-nav-btn{
+    flex: 1; /* Allow the content to grow and occupy remaining space */
+    overflow-y: auto; /* Enable vertical scrolling for the content */
+    width: 80px;
+    background-color: #fafafa;
+    box-shadow: none;
+    border: none;
+    position: fixed; 
+
 }
