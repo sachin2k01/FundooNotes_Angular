@@ -63,9 +63,9 @@ export class NotesContainerComponent implements OnInit {
     else if ($event.action == "edit") {
       
       this.noteList = this.noteList.map(ele => {
-        console.log($event.data.data.title)
-        if (ele.noteId == $event.data.data.noteId) {
-          return $event.data.data; // Replace existing data with new data
+        console.log($event.data.title)
+        if (ele.noteId == $event.data.noteId) {
+          return $event.data; // Replace existing data with new data
         }
         return ele;
       });

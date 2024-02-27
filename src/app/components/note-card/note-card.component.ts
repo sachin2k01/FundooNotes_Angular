@@ -54,11 +54,12 @@ export class NoteCardComponent implements OnInit {
     
     // Subscribe to the closing event of the dialog
     
-    dialogRef.afterClosed().subscribe((result:NoteObj): void => {
-      console.log(result);
+    dialogRef.afterClosed().subscribe((result:any): void => {
+      console.log(result.data);
+      debugger
       // Emit an event to notify the parent component about the edit action
       this.updateList.emit({
-        data: result,
+        data: result.data,
         action: "edit"
       });
     });
